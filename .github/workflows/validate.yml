@@ -12,6 +12,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Build Jekyll for GitHub Pages
+      uses: actions/jekyll-build-pages@v1.0.13
+
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
