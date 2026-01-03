@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #f5a623;
+    --primary-hover: #e09000;
+    --danger-color: #ef4444;
+    --danger-hover: #dc2626;
+    --success-color: #f5a623;
+    --bg-color: #d4e157;
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --text-primary: #1a1a1a;
+    --text-secondary: #5c5c5c;
+    --border-color: #e0e0e0;
+    --input-focus: #f5a623;
+    --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }

@@ -1,0 +1,37 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: #ffffff;
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+.header {
+  text-align: center;
+  padding: 60px 0 40px;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .todolist-main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+

@@ -1,0 +1,135 @@
+/* Individual Item */
+.todo-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #f1f5f9;
+    border-color: var(--border-color);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Custom Checkbox */
+.todo-list-item-checkbox {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  flex-shrink: 0;
+
+  &:hover {
+    border-color: var(--primary-color);
+  }
+
+  &:checked {
+    background: var(--success-color);
+    border-color: var(--success-color);
+  }
+
+  &:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Item Text */
+.todo-list-item-text {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+/* Checked Item Text */
+.todo-list-item:has(.todo-list-item-checkbox:checked) .todo-list-item-text {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+/* Item Buttons */
+.todo-list-item-edit-button,
+.todo-list-item-delete-button {
+  opacity: 0;
+  transition: all 0.2s ease;
+  padding: 5px 12px;
+  font-size: 0.813rem;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.todo-list-item-edit-button {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+
+  &:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+.todo-list-item-delete-button {
+  background: transparent;
+  border: 1px solid var(--danger-color);
+  color: var(--danger-color);
+
+  &:hover {
+    background: var(--danger-color);
+    color: white;
+  }
+}
+
+.todo-list-item:hover {
+  .todo-list-item-edit-button,
+  .todo-list-item-delete-button {
+    opacity: 1;
+  }
+}
+
+/* Edit Mode */
+.todo-edit-item-input {
+  flex: 1;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+  padding: 8px 12px;
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.25);
+  }
+}
+
+.todo-edit-item-save-button {
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+
+  &:hover {
+    background: var(--primary-hover);
+  }
+}
+
